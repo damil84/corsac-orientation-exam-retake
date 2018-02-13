@@ -1,4 +1,32 @@
-﻿@page
-@model ListModel
-@{
-}
+﻿@model NotebookErrorReporter.ViewModels.NamesTicketsVM
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Notebook Error Reporter List</title>
+</head>
+<body>
+    <h1>Notebook Error Reporter List</h1>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Reporter</th>
+            <th>Manufacturer</th>
+            <th>Serial Number</th>
+            <th>Description</th>
+            <th>Date</th>
+
+        </tr>
+        @foreach (var ticketlist in Model.TicketList)
+            {
+            <tr>
+                <td>@ticketlist.Id</td>
+                <td>@ticketlist.Reporter</td>
+                <td>@ticketlist.Manufacturer</td>
+                <td>@ticketlist.SerialNumber</td>
+                <td>@ticketlist.Description</td>
+                <td>@ticketlist.ReportedAt</td>
+            </tr>
+        }
+    </table>
+    </body>
+</html>

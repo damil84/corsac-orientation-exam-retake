@@ -25,7 +25,7 @@ namespace NotebookErrorReporter.Controllers
         [HttpGet("")]
         public IActionResult Index()
         {
-            return View();
+            return View(NamesTicketsVM);
         }
 
         [HttpGet("list")]
@@ -33,7 +33,7 @@ namespace NotebookErrorReporter.Controllers
         {
             NamesTicketsVM.UserList = Repository.GetUserList();
             NamesTicketsVM.TicketList = Repository.GetTicketList();
-            return View();
+            return View(NamesTicketsVM);
         }
     }
 }
