@@ -13,7 +13,7 @@ namespace NotebookErrorReporter.Entities
         public Context(DbContextOptions options) : base(options)
         {
         }
-        public DbSet<Name> Names { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
     }
 }

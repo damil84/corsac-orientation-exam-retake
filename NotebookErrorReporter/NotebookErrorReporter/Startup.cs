@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using NotebookErrorReporter.Entities;
 using NotebookErrorReporter.Repositories;
 using NotebookErrorReporter.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace NotebookErrorReporter
 {
@@ -22,6 +18,7 @@ namespace NotebookErrorReporter
             services.AddScoped<Context>();
             services.AddScoped<Repository>();
             services.AddScoped<NamesTicketsVM>();
+            services.AddDbContext<Context>(options => options.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ErrorReporterDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

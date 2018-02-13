@@ -8,7 +8,7 @@ namespace NotebookErrorReporter.ViewModels
 {
     public class NamesTicketsVM
     {
-        public List<Name> NameList { get; set; }
+        public List<User> NameList { get; set; }
         public List<Ticket> TicketList { get; set; }
     }
 }

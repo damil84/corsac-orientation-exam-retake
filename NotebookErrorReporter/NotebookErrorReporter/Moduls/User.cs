@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 
 namespace NotebookErrorReporter.Moduls
 {
-    public class Name
+    public class User
     {
+        public int Id { get; set; }
         public string Names { get; set; }
     }
 }
