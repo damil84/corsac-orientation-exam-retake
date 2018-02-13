@@ -2,9 +2,38 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Notebook Error Reporter Page</title>
+    <title>Notebook Error Reporting Page</title>
 </head>
 <body>
-    Index page bezony
-    </body>
+    <h1>Notebook Error Reporting Page</h1>
+
+    <table border="0">
+        <tr>
+            <td class="select">Name: &nbsp; </td>
+            <td>
+                <select name="name">
+                    <option>Select reporter's name</option>
+                    @{foreach (var user in Model.UserList)
+                        {
+                            <option value="@user.Name">@user.Name</option>
+                        }
+                    }
+                </select>
+            </td>
+        </tr>
+    </table>
+    <form action="/report" method="post">
+        Manufacturer:
+        <input type="text" name="Manufacturer">
+        <br />
+        Serial Number:
+        <input type="text" name="SerialNumber">
+        <br />
+        Description:
+        <input type="text" name="Description">
+        <br />
+        <input type="submit" value="Report"> <input type="reset" value="Clear">
+    </form>
+    <a href="http://localhost:49648/List">You can check the full list of the reports by clicking here</a>
+</body>
 </html>

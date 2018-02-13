@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using NotebookErrorReporter.Entities;
 using NotebookErrorReporter.Moduls;
 
@@ -25,5 +23,15 @@ namespace NotebookErrorReporter.Repositories
             return Context.Tickets.ToList();
         }
 
+        public object Filter(string query)
+        {
+            return Context.Tickets.Where(car => car.Manufacturer.Equals(query)).ToList();
+        }
+
+
+        public void Report()
+        {
+            return 
+        }
     }
 }
