@@ -5,12 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Moduls\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Entities\" />
     <Folder Include="Repositories\" />
-    <Folder Include="Views\" />
-    <Folder Include="ViewModels\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
