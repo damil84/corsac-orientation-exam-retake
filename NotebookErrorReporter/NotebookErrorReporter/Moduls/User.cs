@@ -8,6 +8,6 @@ namespace NotebookErrorReporter.Moduls
     public class User
     {
         public int Id { get; set; }
-        public string Names { get; set; }
+        public string Name { get; set; }
     }
 }

@@ -13,6 +13,5 @@ namespace NotebookErrorReporter.Repositories
         {
             Context = context;
         }
-
     }
 }
