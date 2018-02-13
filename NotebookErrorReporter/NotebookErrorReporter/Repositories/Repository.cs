@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using NotebookErrorReporter.Entities;
+using NotebookErrorReporter.Moduls;
 
 namespace NotebookErrorReporter.Repositories
 {
@@ -13,5 +14,16 @@ namespace NotebookErrorReporter.Repositories
         {
             Context = context;
         }
+
+        public List<User> GetUserList()
+        {
+            return Context.Users.ToList();
+        }
+
+        public List<Ticket> GetTicketList()
+        {
+            return Context.Tickets.ToList();
+        }
+
     }
 }

@@ -22,8 +22,17 @@ namespace NotebookErrorReporter.Controllers
             NamesTicketsVM = namesTicketsVM;
         }
 
+        [HttpGet("")]
         public IActionResult Index()
         {
+            return View();
+        }
+
+        [HttpGet("list")]
+        public IActionResult List()
+        {
+            NamesTicketsVM.UserList = Repository.GetUserList();
+            NamesTicketsVM.TicketList = Repository.GetTicketList();
             return View();
         }
     }
