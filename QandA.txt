@@ -1,0 +1,15 @@
+Question:
+-What is the difference between unit and integration testing?
+
+Answer:
+- Brief version:
+Nomen est omen :) Unit test is for testing one unit of code. And integration test
+is for testing how well working (or if working at all) a group of units together.
+- Bit more detailed:
+Unit test: it is to test an invidiual units of code to determine whether they are ready to use.
+It is usually executed by developer, and it can be performed any time. Finding errors like this
+usually easy, and cheap.
+Integration test: we combine moduls in the application and test them as a group whether they can
+working together fine. 
+It is usually executed by a test team, and it is applied after unit testing, and before system
+testing. It is more expensive, and finding errors a bit more difficult.
