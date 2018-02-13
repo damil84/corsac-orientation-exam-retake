@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace NotebookErrorReporter.Moduls
 {
-    public class Tickets
+    public class Ticket
     {
         public string Reporter { get; set; }
         public string Manufacturer { get; set; }
