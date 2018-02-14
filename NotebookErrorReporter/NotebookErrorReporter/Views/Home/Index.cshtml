@@ -28,6 +28,7 @@
         Description:
         <input type="text" name="Description">
         <br />
+        <input type="hidden" name="ReportedAt" value="@DateTime.Now.ToString("yyyy.MM.dd")">
         <input type="submit" value="Report" name="Report"> <input type="reset" value="Clear">
     </form>
     <a href="http://localhost:49648/List">You can check the full list of the reports by clicking here</a>
