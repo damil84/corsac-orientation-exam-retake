@@ -27,9 +27,9 @@ namespace NotebookErrorReporter.Controllers
         }
 
         [HttpPost("report")]
-        public IActionResult Report()
+        public IActionResult Report(Moduls.Ticket ticket)
         {
-            Repository.Report();
+            Repository.Report(ticket);
             return RedirectToAction("index");
         }
 

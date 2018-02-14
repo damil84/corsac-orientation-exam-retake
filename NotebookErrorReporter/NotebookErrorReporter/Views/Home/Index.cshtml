@@ -7,22 +7,18 @@
 <body>
     <h1>Notebook Error Reporting Page</h1>
 
-    <table border="0">
-        <tr>
-            <td class="select">Name: &nbsp; </td>
-            <td>
-                <select name="name">
-                    <option>Select reporter's name</option>
-                    @{foreach (var user in Model.UserList)
-                        {
-                            <option value="@user.Name">@user.Name</option>
-                        }
-                    }
-                </select>
-            </td>
-        </tr>
-    </table>
-    <form action="/report" method="post">
+    <form action="report" method="post">
+        Name:
+        <select name="Reporter">
+            <option>Select reporter's name</option>
+            @{foreach (var user in Model.UserList)
+                {
+                    <option value="@user.Name">@user.Name</option>
+                }
+            }
+
+        </select>
+        <br/>
         Manufacturer:
         <input type="text" name="Manufacturer">
         <br />
@@ -32,7 +28,7 @@
         Description:
         <input type="text" name="Description">
         <br />
-        <input type="submit" value="Report"> <input type="reset" value="Clear">
+        <input type="submit" value="Report" name="Report"> <input type="reset" value="Clear">
     </form>
     <a href="http://localhost:49648/List">You can check the full list of the reports by clicking here</a>
 </body>

@@ -25,13 +25,14 @@ namespace NotebookErrorReporter.Repositories
 
         public object Filter(string query)
         {
-            return Context.Tickets.Where(car => car.Manufacturer.Equals(query)).ToList();
+            return Context.Tickets.Where(t => t.Manufacturer.Equals(query)).ToList();
         }
 
-
-        public void Report()
+        public void Report(Ticket ticket)
         {
-            return 
+
+            Context.Tickets.Add(ticket);
+            Context.SaveChanges();
         }
     }
 }
