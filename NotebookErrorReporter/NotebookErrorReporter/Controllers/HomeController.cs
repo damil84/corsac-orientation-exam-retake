@@ -33,6 +33,13 @@ namespace NotebookErrorReporter.Controllers
             return RedirectToAction("index");
         }
 
+        [HttpPost("complete/{id}")]
+        public IActionResult Complete([FromRoute] int id, [FromBody] string secret)
+        {
+            Repository.Delete(id, secret);
+            return RedirectToAction("index");
+        }
+
         [HttpGet("list")]
         public IActionResult List()
         {

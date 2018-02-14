@@ -11,6 +11,7 @@ namespace NotebookErrorReporter.Controllers
         {
             this.Repository = Repository;
         }
+
         [HttpGet("list/query")]
         public IActionResult ReportQuery([FromRoute]string query)
         {
