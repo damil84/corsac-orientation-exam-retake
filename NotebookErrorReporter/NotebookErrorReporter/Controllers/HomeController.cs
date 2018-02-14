@@ -37,7 +37,7 @@ namespace NotebookErrorReporter.Controllers
         public IActionResult Complete([FromRoute] int id, [FromBody] string secret)
         {
             Repository.Delete(id, secret);
-            return RedirectToAction("index");
+            return RedirectToAction("list");
         }
 
         [HttpGet("list")]
