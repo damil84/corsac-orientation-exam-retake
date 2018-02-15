@@ -13,7 +13,7 @@ namespace NotebookErrorReporter.Controllers
         }
 
         [HttpGet("list/query")]
-        public IActionResult ReportQuery([FromRoute]string query)
+        public IActionResult ReportQuery([FromQuery]string query)
         {
             return Json(new { result = "ok", data = Repository.Filter(query) });
         }
